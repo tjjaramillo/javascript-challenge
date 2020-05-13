@@ -6,7 +6,7 @@ var setAttrs = (whattoset,attrs) => {
         whattoset.attr(key,attrs[key]);
     });
 }
-// Add more lists
+// Additional filters/lists
 var filters = d3.select("#filters");
 
 var labels = ["city","state","country","shape"];
