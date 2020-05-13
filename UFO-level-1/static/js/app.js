@@ -1,10 +1,9 @@
 // from data.js
 var tableData = data;
-
-// YOUR CODE HERE!
-
+//  point towards table body
 var tbody = d3.select("tbody");
 
+// set function for obtaining data for matching date with searched date
 var getMatchingRecords = dt => {
     var mdy1 = new Date(dt);
      console.log(mdy1.getMonth());
@@ -19,7 +18,7 @@ var getMatchingRecords = dt => {
     });
     return records;
 }
-
+// fill in table with obtained data for specified date
 var updateTable = records => {
     tbody.html("");
     if (records.length < 1) return;
@@ -32,6 +31,7 @@ var updateTable = records => {
     });
 }
 
+// point towards button in HTML
 var button = d3.select("#filter-btn");
 
 var handleInput = () => {
